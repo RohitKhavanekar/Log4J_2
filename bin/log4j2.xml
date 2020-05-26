@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+<Properties>
+<Property name="basePath">./logs</Property>
+</Properties>
+
+  <Appenders>
+  <RollingFile name="File" fileName="${basePath}/prints.log" filePattern="${basePath}/prints-%d{yyyy-MM-dd}.log">   <!-- SETUP THE FILE LOCATION , JUST COPY PASTE IT -->  
+     <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+      <SizeBasedTriggeringPolicy size="500" />
+          </RollingFile>
+    <Console name="Console" target="SYSTEM_OUT">  <!-- USED TO PRINT OUTPUT IN CONSOLE-->  
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>   <!-- PATTERN OF OUTPUT-->  
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Logger name="First.Demo1" level="trace" additivity="false">         <!-- SEPCIFIC FILE LOGGING WITH LEVEL OF LOGS-->  
+      <AppenderRef ref="Console"/>     <!-- CONSOLE : MEANS OUTPUT IN CONSOLE-->  
+    </Logger>
+    <Root level="trace">
+      <AppenderRef ref="File"/>   <!-- File : MEANS OUTPUT IN LOG FILE-->  
+    </Root>
+  </Loggers>
+</Configuration>

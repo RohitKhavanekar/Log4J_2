@@ -1,0 +1,8 @@
+13:16:59.377 [main] DEBUG First.Demo1 - I am debugging
+13:16:59.380 [main] INFO  First.Demo1 - object is present
+13:16:59.380 [main] ERROR First.Demo1 - object is not present
+13:16:59.380 [main] FATAL First.Demo1 - This is fatal
+13:16:59.381 [main] DEBUG First.Demo1 - I am Debugginf
+13:16:59.381 [main] INFO  First.Demo1 - Info
+13:16:59.381 [main] ERROR First.Demo1 - Error
+13:16:59.381 [main] FATAL First.Demo1 - Fatal
